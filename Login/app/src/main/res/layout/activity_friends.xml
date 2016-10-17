@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/layTab"
+        style="@style/ActivityBarStyle">
+
+        <TextView
+            style="@style/ActivityBarFont"
+            android:text="@string/title_activity_friends"
+        />
+
+        <RelativeLayout
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/imageMinus"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/plus"
+                android:clickable="true"
+                android:onClick="onAddFriendClick"
+            />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/invitationsTab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onInvitationsClick"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textSize="22dip"
+            android:textColor="@color/red_dark"
+            android:text="@string/invitations_pending"
+            android:background="@color/lighter_grey"
+        />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="395dp"
+        android:layout_weight="0.82">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/noFriends"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:textSize="22dip"
+            android:textColor="@color/grey"
+            android:text="@string/no_friends_found"
+            android:background="@color/white"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
